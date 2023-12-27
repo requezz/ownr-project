@@ -18,15 +18,17 @@ const AuthForm: React.FC = () => {
 
     return (
         <form onSubmit={handleSubmit} className={styles.authForm}>
-            <input
-                id="email"
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={styles.emailForm}
-                placeholder="Введите email"
-            />
-            {errorEmail && <div className={styles.errorEmail}>{errorEmail}</div>}
+            <div className={styles.emailContainer}>
+                <input
+                    id="email"
+                    type="text"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className={styles.emailForm}
+                    placeholder="Введите email"
+                />
+                {errorEmail && <div className={styles.errorEmail}>{errorEmail}</div>}
+            </div>
             <div className={styles.passwordContainer}>
                 <input
                     id="password"
@@ -43,13 +45,13 @@ const AuthForm: React.FC = () => {
                 >
                     {showPassword ? <EyeOutlined /> : <EyeInvisibleOutlined />}
                 </button>
+                {errorPassword && (
+                    <div className={styles.errorPassword}>{errorPassword}</div>
+                )}
             </div>
             <button type="submit" className={styles.signInButton}>
                 Войти
             </button>
-            {errorPassword && (
-                <div className={styles.errorPassword}>{errorPassword}</div>
-            )}
         </form>
     );
 };

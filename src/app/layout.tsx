@@ -2,7 +2,7 @@
 import React from "react";
 import Navigation from "@/app/components/Navigation/Navigation";
 import Footer from "@/app/components/Footer/Footer";
-import { AuthProvider, useAuth } from "@/app/components/Context/AuthContext";
+import { AuthProvider, useAuth } from "@/app/context/AuthContext";
 import AuthForm from "@/app/components/AuthForm/AuthForm";
 
 export default function RootLayout({

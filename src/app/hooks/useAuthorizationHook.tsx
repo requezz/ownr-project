@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, ChangeEvent, Dispatch, SetStateAction } from "react";
-import { useAuth } from "@/app/components/Context/AuthContext";
+import { useAuth } from "@/app/context/AuthContext";
 
 interface AuthorizationHookProps {
     email: string;

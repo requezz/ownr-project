@@ -43,6 +43,12 @@
 .login,
 .password,
 .phone,
-.email, {
+.email {
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .userData {
+    width: 300px;
+  }
 }

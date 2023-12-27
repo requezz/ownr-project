@@ -20,3 +20,24 @@
   height: 50px;
   margin-right: 20px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .cryptoContainer {
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .cryptoContainer {
+    width: 200px;
+    height: 40px;
+    margin: 20px;
+    font-size: 13px;
+  }
+
+  .cryptoImage {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}

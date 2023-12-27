@@ -5,10 +5,13 @@
   outline: none;
   border: 1px solid lightgray;
   border-radius: 5px;
-  display: block;
-  position: relative;
 }
 
+.passwordForm {
+  margin-top: 30px;
+}
+
+.emailContainer,
 .passwordContainer {
   position: relative;
 }
@@ -18,11 +21,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    height: 90vh;
-}
-
-.passwordForm {
-  margin-top: 30px;
+  height: 90vh;
 }
 
 .togglePasswordButton {
@@ -59,11 +58,35 @@
 }
 
 .errorEmail {
-  top: 40%;
-  left: 42%;
+  top: 45px;
+  left: 0;
 }
 
 .errorPassword {
-  top: 49%;
-  left: 42%;
+  top: 75px;
+  left: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .errorEmail {
+    top: 45px;
+    left: 0;
+  }
+
+  .errorPassword {
+    top: 75px;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .errorEmail {
+    top: 45px;
+    left: 0;
+  }
+
+  .errorPassword {
+    top: 75px;
+    left: 0;
+  }
 }
