@@ -1,0 +1,29 @@
+.fetchMoreCrypto {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.fetchMoreCryptoButton {
+  width: 170px;
+  height: 50px;
+  border: none;
+  background-color: #e8e6e6;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: #d2d0d0;
+    transition: 0.5s;
+  }
+}
+
+.cryptoInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.listCryptoInfo {
+  display: flex;
+  justify-content: center;
+}

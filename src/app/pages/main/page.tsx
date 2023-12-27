@@ -1,12 +1,12 @@
 import React from "react";
 import CryptoList from "@/app/components/CryptoList/CryptoList";
-import "./globals.css";
-import styles from "./page.module.css";
 
-export default function Home() {
+const Main = () => {
     return (
-        <main className={styles.main}>
+        <main>
             <CryptoList />
         </main>
     );
-}
+};
+
+export default Main;

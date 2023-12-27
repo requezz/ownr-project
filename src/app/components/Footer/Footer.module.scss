@@ -1,0 +1,17 @@
+
+
+.instagramIcon,
+.twitterIcon,
+.linkedinIcon,
+.githubIcon,
+.gitlabIcon {
+  margin: 20px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: #bebebe;
+    transition: 0.3s;
+  }
+}

@@ -1,0 +1,12 @@
+.navigationContainer {
+  width: 250px;
+}
+
+.navLink {
+  color: #fff;
+
+  &:hover {
+    color: #bebebe;
+    transition: 0.3s;
+  }
+}
