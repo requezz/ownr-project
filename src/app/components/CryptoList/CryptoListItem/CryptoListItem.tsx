@@ -6,7 +6,7 @@ interface CryptoListItemProps {
   crypto: CryptoData;
 }
 
-export default function CryptoListItem(props: CryptoListItemProps) {
+const CryptoListItem = (props: CryptoListItemProps) => {
     const { crypto } = props;
     return (
         <div className={styles.cryptoContainer}>
@@ -22,3 +22,5 @@ export default function CryptoListItem(props: CryptoListItemProps) {
         </div>
     );
 }
+
+export default CryptoListItem

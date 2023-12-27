@@ -8,7 +8,8 @@ import {
 } from "@ant-design/icons";
 import styles from "./Footer.module.scss";
 
-export default function Footer() {
+// Можно было скачать иконки и вставить как react component, но решил скачать либу @ant-design/icon
+const Footer = () => {
     return (
         <footer>
             <div className={styles.footerContainer}>
@@ -31,3 +32,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer

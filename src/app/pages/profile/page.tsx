@@ -1,10 +1,12 @@
 import React from "react";
 import ProfileContent from "@/app/components/ProfileContent/ProfileContent";
 
-export default function Profile() {
+const Profile: React.FC = () => {
     return (
         <main>
             <ProfileContent />
         </main>
     );
-}
+};
+
+export default Profile;

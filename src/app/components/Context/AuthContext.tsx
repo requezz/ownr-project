@@ -9,7 +9,7 @@ interface AuthContextProps {
 
 const AuthContext = createContext<AuthContextProps | null>(null);
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
     const login = () => {
@@ -34,3 +34,4 @@ export const useAuth = (): AuthContextProps => {
     }
     return context;
 };
+

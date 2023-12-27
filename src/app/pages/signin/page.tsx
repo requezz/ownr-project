@@ -2,7 +2,7 @@ import React from "react";
 import AuthForm from "@/app/components/AuthForm/AuthForm";
 import "../../globals.css";
 
-const SignIn = () => {
+const SignIn: React.FC = () => {
     return (
         <main>
             <AuthForm />

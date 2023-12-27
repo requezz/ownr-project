@@ -1,25 +1,37 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, Dispatch, SetStateAction } from "react";
 import { useAuth } from "@/app/components/Context/AuthContext";
 
-export default function useAuthorizationHook() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
-    const [errorEmail, setErrorEmail] = useState("");
-    const [errorPassword, setErrorPassword] = useState("");
+interface AuthorizationHookProps {
+    email: string;
+    password: string;
+    setEmail: (Dispatch<SetStateAction<string>>);
+    setPassword: Dispatch<SetStateAction<string>>;
+    errorEmail: string;
+    errorPassword: string;
+    handleSubmit: (event: React.FormEvent) => void;
+    togglePasswordVisibility: () => void;
+    showPassword: boolean;
+}
+
+const useAuthorizationHook: () => AuthorizationHookProps = () => {
+    const [email, setEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const [showPassword, setShowPassword] = useState<boolean>(false);
+    const [errorEmail, setErrorEmail] = useState<string>("");
+    const [errorPassword, setErrorPassword] = useState<string>("");
     const auth = useAuth();
 
     const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
-    const validateEmail = (email: string) => {
-        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const validateEmail = (email: string): boolean => {
+        const re: RegExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return re.test(String(email).toLowerCase());
     };
 
-    const validatePassword = (password: string) => {
-        const re =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*,.()-_=+])[a-zA-Z\d!@#$%^&*,.()-_=+]{8,}$/;
+    const validatePassword = (password: string): boolean => {
+        const re: RegExp =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*,.()-_=+])[a-zA-Z\d!@#$%^&*,.()-_=+]{8,}$/;
         return re.test(password);
     };
 
@@ -43,6 +55,7 @@ export default function useAuthorizationHook() {
             auth.login();
         }
     };
+
     return {
         email,
         password,
@@ -54,4 +67,6 @@ export default function useAuthorizationHook() {
         togglePasswordVisibility,
         showPassword,
     };
-}
+};
+
+export default useAuthorizationHook;

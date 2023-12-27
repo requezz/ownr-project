@@ -5,7 +5,7 @@ import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 import styles from "./AuthForm.module.scss";
 import useAuthorizationHook from "@/app/hooks/useAuthorizationHook";
 
-export default function AuthForm() {
+const AuthForm = () => {
     const {
         email,
         password,
@@ -54,4 +54,6 @@ export default function AuthForm() {
             )}
         </form>
     );
-}
+};
+
+export default AuthForm;

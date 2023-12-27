@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Navigation.module.scss";
 
-export default function Navigation() {
+const Navigation = () => {
     return (
         <header>
             <div className={styles.navigationContainer}>
@@ -24,3 +24,5 @@ export default function Navigation() {
         </header>
     );
 }
+
+export default Navigation;
