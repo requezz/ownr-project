@@ -1,11 +1,9 @@
-"use client";
-
 import React from "react";
 import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 import styles from "./AuthForm.module.scss";
 import useAuthorizationHook from "@/app/hooks/useAuthorizationHook";
 
-const AuthForm = () => {
+const AuthForm: React.FC = () => {
     const {
         email,
         password,

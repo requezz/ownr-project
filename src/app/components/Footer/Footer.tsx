@@ -9,7 +9,7 @@ import {
 import styles from "./Footer.module.scss";
 
 // Можно было скачать иконки и вставить как react component, но решил скачать либу @ant-design/icon
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <footer>
             <div className={styles.footerContainer}>

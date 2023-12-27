@@ -1,5 +1,4 @@
-"use client";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface AuthContextProps {
   isAuthenticated: boolean;
@@ -9,7 +8,9 @@ interface AuthContextProps {
 
 const AuthContext = createContext<AuthContextProps | null>(null);
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+export const AuthProvider: React.FC<{ children: ReactNode }> = ({
+    children,
+}) => {
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
     const login = () => {
@@ -25,7 +26,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             {children}
         </AuthContext.Provider>
     );
-}
+};
 
 export const useAuth = (): AuthContextProps => {
     const context = useContext(AuthContext);
@@ -34,4 +35,3 @@ export const useAuth = (): AuthContextProps => {
     }
     return context;
 };
-

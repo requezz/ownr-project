@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ProfileContent.module.scss";
 import { UserOutlined } from "@ant-design/icons";
 
-const ProfileContent = () => {
+const ProfileContent: React.FC = () => {
     return (
         <section>
             <div className={styles.profileContainer}>

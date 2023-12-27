@@ -3,10 +3,10 @@ import { CryptoData } from "@/app/components/CryptoList/CryptoList";
 import styles from "./CryptoListItem.module.scss";
 
 interface CryptoListItemProps {
-  crypto: CryptoData;
+    crypto: CryptoData;
 }
 
-const CryptoListItem = (props: CryptoListItemProps) => {
+const CryptoListItem: React.FC<CryptoListItemProps> = (props) => {
     const { crypto } = props;
     return (
         <div className={styles.cryptoContainer}>
@@ -23,4 +23,4 @@ const CryptoListItem = (props: CryptoListItemProps) => {
     );
 }
 
-export default CryptoListItem
+export default CryptoListItem;

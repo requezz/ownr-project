@@ -1,20 +1,20 @@
-"use client";
-import React, { useState, useEffect } from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CryptoListItem from "@/app/components/CryptoList/CryptoListItem/CryptoListItem";
 import styles from "./CryptoList.module.scss";
 
 export interface CryptoData {
-  id: string;
-  name: string;
-  current_price: number;
-  image: string;
+    id: string;
+    name: string;
+    current_price: number;
+    image: string;
 }
 
 const CryptoList: React.FC = () => {
     const [cryptoData, setCryptoData] = useState<CryptoData[]>([]);
-    const [loading, setLoading] = useState(false);
-    const [page, setPage] = useState(1);
+    const [loading, setLoading] = useState<boolean>(false);
+    const [page, setPage] = useState<number>(1);
 
     useEffect(() => {
         const fetchData = async () => {
