@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { EyeInvisibleOutlined, EyeOutlined } from "@ant-design/icons";
 import styles from "./AuthForm.module.scss";

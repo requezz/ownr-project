@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import CryptoList from "@/app/components/CryptoList/CryptoList";
 import "./globals.css";

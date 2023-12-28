@@ -1,11 +1,30 @@
-
+.footerContainer {
+  position: relative;
+}
 
 .instagramIcon,
 .twitterIcon,
 .linkedinIcon,
 .githubIcon,
-.gitlabIcon {
+.gitlabIcon,
+.logoutIcon
+ {
   margin: 20px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: #bebebe;
+    transition: 0.3s;
+  }
+}
+
+.logoutButton {
+  position: absolute;
+  right: 30px;
+  border: none;
+  background: none;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
