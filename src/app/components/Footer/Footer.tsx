@@ -12,7 +12,6 @@ import styles from "./Footer.module.scss";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/context/AuthContext";
 
-// Можно было скачать иконки и вставить как react component, но решил установить либу @ant-design/icon
 const Footer: React.FC = () => {
     const router = useRouter();
     const auth = useAuth();
